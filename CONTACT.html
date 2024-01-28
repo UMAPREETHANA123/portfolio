@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CONTACT</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="static-txt">Contact details:</div>
+    <ul class="dynamic-txts">
+      <li><span>Preethana S U</span></li>
+      <li><span>supreethana@gmail.com</span></li>
+      <li><span>6789543609</span></li>
+      <li><span>Vellore,Tamilnadu</span></li>
+    </ul>
+  </div>
+</body>
+</html>
+    <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image:url(background.jpg);
+}
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color:black;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #776dfc;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #344f3b;
+  border-left: 2px solid #836dfc;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+</style>
+</body>
+</html>
